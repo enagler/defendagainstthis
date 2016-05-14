@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Use of jQuery's get function</title>
+    </head>
+
+    <body>
+        <h1>Use of jQuery's get function</h1>        
+        <p id="exampleorgcharcount">Waiting to contact code.jquery.com</p>
+    </body>
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"
+            integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   
+            crossorigin="anonymous">
+    </script>
+       <script>
+            $( document ).ready(function () {
+                
+                $.get('https://code.jquery.com/jquery-1.12.3.min.js', function ( data ) {
+                    $( '#exampleorgcharcount' )[0].firstChild.data = "The jQuery 1.12.3 javascript contains " + data.length + " characters."
+                })
+        })
+        </script>
+</html>
+
+

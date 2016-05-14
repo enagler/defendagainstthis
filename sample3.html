@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Use of jQuery's click function with class styling</title>
+        <style>
+            .red-color {
+                background-color: red;
+            }
+
+            .blue-color {
+                background-color: blue;
+            }
+            
+            .green-color {
+                background-color: green;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Use of jQuery's click function with class styling</h1>        
+        <p id="colorChangingText">This text should change color</p>
+        <hr />
+        <div style="display:inline">
+            <button id="redButton">Red</button>
+            <button id="blueButton">Blue</button>
+            <button id="greenButton">Green</button>
+        </div>
+    </body>
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"
+            integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   
+            crossorigin="anonymous">
+    </script>
+    <script>
+        
+        function clearClasses() {
+            $('#colorChangingText').removeClass('red-color blue-color green-color')
+        }
+        
+        $( '#redButton' ).click(function () {
+            clearClasses()
+            $('#colorChangingText').addClass('red-color')
+        });
+        
+        $( '#blueButton' ).click(function () {
+            clearClasses()
+            $('#colorChangingText').addClass('blue-color')
+        });
+        
+        $( '#greenButton' ).click(function () {
+            clearClasses()
+            $('#colorChangingText').addClass('green-color')
+        });       
+    </script>
+</html>
+
+

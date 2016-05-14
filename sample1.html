@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Use of jQuery's ready() function</title>
+    </head>
+
+    <body>
+        <h1>Use of jQuery ready function</h1>        
+        <p id="maybeGreen">If the ready function was called this text should be highlighted in green!</p>
+    </body>
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"
+                integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   
+                crossorigin="anonymous">
+        </script>
+        <script>
+            $( document ).ready(function () {
+                console.debug("Ready Function Called!");
+                $('#maybeGreen').css({
+                    "background-color": 'green'
+                })
+            })
+        </script>
+</html>
+
+
